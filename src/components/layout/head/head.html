@@ -1,0 +1,64 @@
+<head>
+	<if condition="'[[preloader.enable]]' === 'true'">
+		<include src="@components/effects/preloader/preloader.html" locals='{"once":"[[preloader.once]]"}'></include>
+	</if>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<include src="@components/layout/head/fonts-preload.html"></include>
+	<link rel="stylesheet" href="@styles/fonts/fonts.css">
+	<link rel="stylesheet" href="@styles/fonts/iconfont.css">
+	<link rel="stylesheet" href="@styles/style.scss">
+	<link rel="shortcut icon" href="@img/favicon.png">
+	<if condition="'[[keywords]]' !== ''">
+		<meta name="keywords" content="[[keywords]]">
+	</if>
+	<if condition="'[[description]]' !== ''">
+		<meta name="description" content="[[description]]">
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="[[title]]">
+		<meta property="og:description" content="[[description]]">
+		<meta property="og:image" content="@img/favicon.png">
+		<meta property="og:url" content="https://your-domain.com">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:site_name" content="Елена Викторовна Смирнова - Репетитор русского языка">
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="[[title]]">
+		<meta name="twitter:description" content="[[description]]">
+		<meta name="twitter:image" content="@img/favicon.png">
+	</if>
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://your-domain.com">
+	<!-- Robots -->
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+	<!-- Структурированные данные Schema.org -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Елена Викторовна Смирнова",
+		"jobTitle": "Преподаватель русского языка и литературы",
+		"description": "Кандидат филологических наук, преподаватель русского языка и литературы с опытом работы более 12 лет",
+		"url": "https://your-domain.com",
+		"sameAs": [],
+		"knowsAbout": ["Русский язык", "Литература", "Подготовка к ЕГЭ", "Подготовка к ОГЭ"],
+		"offers": {
+			"@type": "Offer",
+			"category": "Образовательные услуги",
+			"description": "Индивидуальные и групповые занятия по русскому языку, подготовка к экзаменам"
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "EducationalOccupationalCredential",
+		"credentialCategory": "Образование",
+		"educationalLevel": "Высшее образование",
+		"about": "Русский язык и литература"
+	}
+	</script>
+	<title>[[title]]</title>
+</head>

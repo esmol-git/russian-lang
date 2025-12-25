@@ -1,0 +1,104 @@
+<template src="@components/templates/main/main.html" locals='{
+		"title":"Онлайн уроки русского языка с Еленой Викторовной Смирновой | Репетитор русского языка онлайн", 
+		"lang":"ru",
+		"preloader": {
+			"enable":"false",
+			"once":"false"
+		},
+		"keywords":"репетитор русского языка онлайн, уроки русского языка онлайн, онлайн подготовка к ЕГЭ по русскому языку, учитель русского языка онлайн, изучение русского языка онлайн, онлайн занятия по русскому языку, русский язык по скайпу", 
+		"description":"Профессиональные онлайн уроки русского языка с опытным преподавателем Еленой Викторовной Смирновой. Индивидуальные и групповые онлайн занятия, подготовка к ЕГЭ и ОГЭ. Современные методики онлайн обучения русскому языку из любой точки мира!"
+	}'>
+	<block name="header">
+		<include src="@components/layout/header/header.html" locals='{"active":"Главная"}'></include>
+	</block>
+	<block name="main">
+		<include src="@components/pages/index/index.html" locals='{}'></include>
+	</block>
+	<block name="footer">
+		<include src="@components/layout/footer/footer.html" locals='{}'></include>
+	</block>
+	<block name="popup">
+		<include src="@components/layout/popup/popup.html" locals='{}'></include>
+		<!-- Popup с формой -->
+		<div data-fls-popup="form-popup" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper class="popup__wrapper">
+				<div data-fls-popup-body class="popup__body">
+					<button data-fls-popup-close type="button" class="popup__close" aria-label="Закрыть окно"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" /><path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" /></svg></button>
+					<div data-fls-popup-content class="popup__content">
+						<div class="popup__form">
+							<div class="popup__header">
+								<h2 class="popup__title">Оставить заявку</h2>
+								<p class="popup__subtitle">Заполните форму и мы свяжемся с вами в ближайшее время</p>
+							</div>
+							<form data-fls-form="dev" class="form">
+								<div class="form__item">
+									<label class="form__label">Ваше имя</label>
+									<input data-fls-input data-fls-form-validatenow required autocomplete="off" type="text" name="name" data-fls-form-errtext="Введите имя" placeholder="Введите имя" class="input">
+								</div>
+								<div class="form__item">
+									<label class="form__label">Ваш email</label>
+									<input data-fls-input data-fls-form-validatenow required autocomplete="off" type="email" name="email" data-fls-form-errtext="Введите корректный email" placeholder="Введите корректный email" class="input">
+								</div>
+								<div class="form__item">
+									<label class="form__label">Ваш телефон</label>
+									<input data-fls-input data-fls-input-mask="+7(999) 999-99-99" data-fls-form-validatenow required autocomplete="off" type="tel" name="phone" data-fls-form-errtext="Введите телефон" placeholder="+7(___) ___-__-__" class="input">
+								</div>
+								<div class="form__item">
+									<label class="form__label">Сообщение</label>
+									<textarea data-fls-input data-fls-input-autoheight autocomplete="off" name="message" placeholder="Введите ваше сообщение" class="input input--textarea" rows="4"></textarea>
+								</div>
+								<button type="submit" class="button button--submit">
+									<span>Отправить</span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Popup для оформления покупки -->
+		<div data-fls-popup="order-popup" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper class="popup__wrapper">
+				<div data-fls-popup-body class="popup__body">
+					<button data-fls-popup-close type="button" class="popup__close" aria-label="Закрыть окно"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" /><path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" /></svg></button>
+					<div data-fls-popup-content class="popup__content">
+						<div class="popup__form">
+							<div class="popup__header">
+								<h2 class="popup__title">Оформление покупки</h2>
+							</div>
+							<form data-fls-form="dev" data-fls-form-type="order" class="form">
+								<div class="form__item">
+									<label class="form__label">Имя</label>
+									<input data-fls-input data-fls-form-validatenow required autocomplete="off" type="text" name="name" data-fls-form-errtext="Введите имя" placeholder="Введите имя" class="input">
+								</div>
+								<div class="form__item">
+									<label class="form__label">Email</label>
+									<input data-fls-input data-fls-form-validatenow required autocomplete="off" type="email" name="email" data-fls-form-errtext="Введите корректный email" placeholder="Введите email" class="input">
+								</div>
+								<div class="form__item">
+									<label class="form__label">Выберите пакет</label>
+									<select data-fls-select data-fls-select-modif="form" data-fls-form-validatenow required name="package" id="order-package-select">
+									<option value="4" data-price="3200">4 занятия - 3200 руб.</option>
+									<option value="8" data-price="5600">8 занятий - 5600 руб.</option>
+									<option value="12" data-price="7800" selected>12 занятий - 7800 руб.</option>
+									<option value="16" data-price="14400">16 занятий - 14400 руб.</option>
+									</select>
+								</div>
+								<div class="form__item form__item--price">
+									<label class="form__label">Общая цена:</label>
+									<div class="form__price">
+										<span class="form__price-value" id="total-price">7800</span>
+										<span class="form__price-currency">руб.</span>
+									</div>
+								</div>
+								<button type="submit" class="button button--submit button--buy">
+									<span>Купить</span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</block>
+</template>
