@@ -70,7 +70,7 @@
     "tippy.js": "latest",
     "vite": "^7",
     "vite-plugin-ftp": "latest",
-    "vite-plugin-inspect": "latest",
+    "vite-plugin-inspect": "^11.3.0",
     "vite-plugin-nunjucks": "^0.2.0",
     "vite-plugin-php": "latest",
     "vite-plugin-pug": "latest",
