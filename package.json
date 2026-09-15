@@ -75,6 +75,7 @@
     "vite-plugin-php": "latest",
     "vite-plugin-pug": "latest",
     "vite-plugin-qrcode": "latest",
+    "qrcode-terminal": "latest",
     "vite-plugin-static-copy": "latest",
     "vite-plugin-webfont-dl": "latest",
     "vite-plugin-zip-pack": "latest",
